@@ -15,3 +15,44 @@ body {
 .darkMode span {
   margin-right: 10px;
 }
+
+.containerBmi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.containerBmi .wei-hei {
+  border: 3.5px solid white;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.containerBmi .wei-hei .weight {
+  padding-bottom: 15px;
+}
+
+.containerBmi .wei-hei .weight span {
+  padding-right: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.containerBmi .wei-hei .weight input {
+  width: 200px;
+  height: 40px;
+}
+
+.containerBmi .wei-hei .height span {
+  padding-right: 18.4px;
+  font-weight: bold;
+  color: black;
+}
+
+.containerBmi .wei-hei .height input {
+  width: 200px;
+  height: 40px;
+}
