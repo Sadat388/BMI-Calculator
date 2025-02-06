@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(149, 209, 136) !important;
+  color: white !important; /* Ensures text is readable */
+  margin: 0; /* Removes default margin */
+  height: 100vh; /* Ensures full height */
+}
+
+.darkMode {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+  background-color: rgb(119, 158, 243);
+}
+
+.darkMode span {
+  margin-right: 10px;
+}
