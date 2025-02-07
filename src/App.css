@@ -5,14 +5,31 @@ body {
   height: 100vh;
 }
 
-.darkMode {
+.dark-theme {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+
+.dark-theme .title,
+.dark-theme .bmi-result,
+.dark-theme .containerBmi .wei-hei .weight span,
+.dark-theme .containerBmi .wei-hei .height span,
+.dark-theme .bmi-btn {
+  color: white;
+}
+
+.dark-theme .enableDarkMode {
+  background-color: rgba(128, 128, 128, 0.39);
+}
+
+.enableDarkMode {
   display: flex;
   justify-content: right;
   padding: 10px;
-  background-color: rgb(119, 158, 243);
+  background-color: #2e8b57;
 }
 
-.darkMode span {
+.enableDarkMode span {
   margin-right: 10px;
 }
 

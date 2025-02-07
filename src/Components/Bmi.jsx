@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
 export const Bmi = () => {
+  // let myStyle = {
+  //   color: 'white',
+  //   backgroundColor: 'black'
+  // }
+
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
   const [result, setResult] = useState(null);
