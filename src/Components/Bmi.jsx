@@ -7,23 +7,39 @@ export const Bmi = () => {
   // }
 
   const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
+  const [heightFt, setheightFt] = useState("");
+  const [heightIn, setheightIn] = useState("");
+  // const [heightMeter, setheightMeter] = useState("");
+
   const [result, setResult] = useState(null);
 
   const handleClick = () => {
     const weightValue = parseFloat(weight);
-    const heightValue = parseFloat(height);
+    const heightFtValue = parseFloat(heightFt);
+    const heightInValue = parseFloat(heightIn);
+    // const heightMeterValue = parseFloat(heightMeter);
 
-    if (!isNaN(weightValue) && !isNaN(heightValue)) {
-      setResult(weightValue / (heightValue * heightValue));
+    if (!isNaN(weightValue) && !isNaN(heightFtValue) && !isNaN(heightInValue)) {
+      setResult(
+        weightValue / ((heightFtValue * 12 + heightInValue) * 0.0254) ** 2
+      );
     } else {
       alert("Please enter valid numbers!");
     }
+
+    // if (!isNaN(weightValue) && !isNaN(heightMeterValue)) {
+    //   setResult(weightValue / (heightMeterValue * heightMeterValue));
+    // } else {
+    //   alert("Please enter valid numbers!");
+    // }
   };
 
   const handleClickClear = () => {
     setWeight("");
-    setHeight("");
+
+    setheightFt("");
+    setheightIn("");
+    // setheightMeter("");
     setResult(null);
   };
 
@@ -49,11 +65,30 @@ export const Bmi = () => {
             <span>Height: </span>
             <input
               type="text"
-              value={height}
-              onChange={(event) => setHeight(event.target.value)}
-              placeholder="Enter your height (meter)"
+              value={heightFt}
+              onChange={(event) => setheightFt(event.target.value)}
+              className="input-ft"
             />
+            <span>ft</span>
+            <input
+              type="text"
+              value={heightIn}
+              onChange={(event) => setheightIn(event.target.value)}
+              className="input-in"
+            />
+            <span>in</span>
+            {/* <input
+              type="text"
+              value={heightMeter}
+              onChange={(event) => setheightMeter(event.target.value)}
+              placeholder="Enter your height (meter)"
+            /> */}
           </div>
+
+          {/* <div className="cm-">
+            <span>switch to cm</span>
+            <span>switch to m</span>
+          </div> */}
 
           <div className="bmi-btn">
             <button class="btn btn-warning" onClick={handleClick}>

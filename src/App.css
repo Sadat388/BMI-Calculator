@@ -55,7 +55,7 @@ body {
 .containerBmi .wei-hei {
   border: 3.5px solid white;
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -81,11 +81,6 @@ body {
   color: black;
 }
 
-.containerBmi .wei-hei .height input {
-  width: 200px;
-  height: 40px;
-}
-
 .containerBmi .wei-hei .bmi-btn {
   padding-right: 15px;
   font-weight: bold;
@@ -104,6 +99,21 @@ body {
 }
 
 .bmi-btn {
+  padding-top: 20px;
   display: flex;
   gap: 50px;
+}
+
+.containerBmi .wei-hei .height .input-ft {
+  height: 40px;
+  width: 40px;
+  font-size: 17px;
+  margin-right: 7px;
+}
+
+.containerBmi .wei-hei .height .input-in {
+  height: 40px;
+  width: 40px;
+  font-size: 17px;
+  margin-right: 7px;
 }
