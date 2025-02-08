@@ -43,6 +43,12 @@ export const Bmi = () => {
     setResult(null);
   };
 
+  const nextBox = (current, next) => {
+    if (current.value.length >= current.maxLength) {
+      document.getElementById(next).focus();
+    }
+  };
+
   return (
     <>
       <div className="title">
@@ -68,6 +74,8 @@ export const Bmi = () => {
               value={heightFt}
               onChange={(event) => setheightFt(event.target.value)}
               className="input-ft"
+              maxLength={1}
+              onInput={(e) => nextBox(e.target, "in-box")}
             />
             <span>ft</span>
             <input
@@ -75,6 +83,8 @@ export const Bmi = () => {
               value={heightIn}
               onChange={(event) => setheightIn(event.target.value)}
               className="input-in"
+              maxLength={2}
+              id="in-box"
             />
             <span>in</span>
             {/* <input
